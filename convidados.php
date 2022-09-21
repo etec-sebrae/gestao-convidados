@@ -40,7 +40,7 @@
         <tr>
           <th>ID</th>
           <th>Nome convidado</th>
-          <th>Quantidade acompanhante</th>
+          <th>Qtd acompanhante</th>
           <th>Acão</th>
         </tr>
       </thead>
