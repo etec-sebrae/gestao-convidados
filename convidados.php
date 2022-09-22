@@ -28,7 +28,7 @@
       </div>
       <div class="col-3">
         <!-- <label for="staticEmail2">acompanhante</label> -->
-        <input type="number" class="form-control" id="nome" placeholder="acompanhante" name="acompanhante">
+        <input type="number" class="form-control" id="acompanhante" placeholder="acompanhante" name="acompanhante">
 
       </div>
       <div class="col-5 text-left">
@@ -47,15 +47,12 @@
       <tbody>
         <?php foreach ($resultado  as $convidado) : ?>
           <tr>
-            <td> <?php echo $convidado['id_convidados'] ?> </td>
+            <td ><?php echo $convidado['id_convidados'] ?> </td>
             <td><?php echo $convidado['nome'] ?></td>
             <td><?php echo $convidado['acompanhantes'] ?></td> 
-            <td> 
-               <a href="editar.php?id=<?php echo $convidado['id_convidados']; ?>">
-                    <button type="button" class="btn btn-success">
+            <td> <button type="button" onclick="atualizar()" class="btn btn-success">
                         Atualizar
-                    </button>                
-                </a>
+                  </button> 
             </td>          
             
             <td> 
@@ -71,6 +68,13 @@
     </table>
     </form>
   </div>
+
+  <script>
+    function atualizar(nome, acompanhantes){         
+      document.getElementById("nome").setAttribute('value',"teste");
+      document.getElementById("acompanhante").setAttribute('value',"2");
+    }
+  </script>
 </body>
 
 </html>
